@@ -7,6 +7,8 @@ import fetch from "node-fetch"; // Node 18+ has fetch; if using earlier Node use
 dotenv.config();
 
 const app = express();
+app.use(express.static("public"));
+
 app.use(bodyParser.json());
 
 const PORT = process.env.PORT || 3000;
